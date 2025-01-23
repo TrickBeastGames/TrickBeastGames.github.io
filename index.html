@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atomic Models Explorer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Atomic Models Explorer</h1>
+    <p>Explore the evolution of atomic models, their limitations, successes, and evidence!</p>
+  </header>
+
+  <main>
+    <section id="models">
+      <div class="model-card" onclick="openModel('thomson')">
+        <h2>Thomson Model</h2>
+        <p>Plum Pudding Model</p>
+        <img src="images/thomson.png" alt="Thomson Model Illustration" class="model-image">
+      </div>
+      <div class="model-card" onclick="openModel('rutherford')">
+        <h2>Rutherford Model</h2>
+        <p>Nuclear Model</p>
+        <img src="images/rutherford.jpg" alt="Rutherford Model Illustration" class="model-image">
+      </div>
+      <div class="model-card" onclick="openModel('bohr')">
+        <h2>Bohr Model</h2>
+        <p>Energy Levels</p>
+        <img src="images/bohr.png" alt="Bohr Model Illustration" class="model-image">
+      </div>
+      <div class="model-card" onclick="openModel('deBroglie')">
+        <h2>de Broglie</h2>
+        <p>Wave-Particle Duality</p>
+        <img src="images/debroglie.jpg" alt="de Broglie Model Illustration" class="model-image">
+      </div>
+      <div class="model-card" onclick="openModel('quark')">
+        <h2>Quark Model</h2>
+        <p>Standard Model</p>
+        <img src="images/quark.png" alt="Quark Model Illustration" class="model-image">
+      </div>
+    </section>
+
+    <section id="modal" class="hidden">
+      <div class="modal-content">
+        <button class="close" onclick="closeModel()">X</button>
+        <h2 id="model-title"></h2>
+        <p id="model-description"></p>
+        <h3>Limitations</h3>
+        <p id="model-limitations"></p>
+        <h3>Successes</h3>
+        <p id="model-successes"></p>
+        <h3>Evidence</h3>
+        <p id="model-evidence"></p>
+        <h3>Math Problem</h3>
+        <div id="math-problem">
+          <p id="problem-description"></p>
+          <input type="number" id="problem-input" placeholder="Enter your answer">
+          <button onclick="checkAnswer()">Check Answer</button>
+          <p id="problem-result"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Created by Kaden Van den Eynden</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
